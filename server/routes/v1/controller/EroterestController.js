@@ -6,10 +6,14 @@ module.exports = class EroterestController {
   constructor() {}
 
   static async fetchMovieUrl(req, res) {
-    const url = req.query.url;
-    const scraper = new MovieLinkScraper(url);
-    const movieUrls = await scraper.exec();
-    console.log(movieUrls);
-    res.json({ movieUrls });
+    try {
+      const url = req.query.url;
+      const scraper = new MovieLinkScraper(url);
+      const movie = await scraper.exec();
+      console.log(movie);
+      res.json({ movie });
+    } catch (e) {
+      res.status(400).send(e.message);
+    }
   }
 };

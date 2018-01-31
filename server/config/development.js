@@ -1,4 +1,3 @@
-const configs = require('konfig')();
 const morgan = require('morgan');
 const Logger = require('../utils/Logger');
 
@@ -9,7 +8,7 @@ module.exports = function (app) {
 
   app.use(morgan('dev'));
   Logger.activate();
-  logger.info(configs.app);
+  logger.info(process.env);
 
   app.use((err, req, res, next) => {
     res.status(err.status || 500);

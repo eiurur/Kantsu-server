@@ -1,28 +1,20 @@
-const fs = require('fs');
-const path = require('path');
 const morgan = require('morgan');
 const Logger = require('../utils/Logger');
 
 module.exports = (app) => {
-  app.locals.pretty = false;
+  app.locals.pretty = true;
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  process.on('unhandledRejection', console.dir);
 
-  // Logging (access)
-  const FileStreamRotator = require('file-stream-rotator');
-  const ACCESS_LOG_DIRECTORY = path.resolve('logs', 'accesslog');
-
-  // ensure log directory exists
-  fs.existsSync(ACCESS_LOG_DIRECTORY) || fs.mkdirSync(ACCESS_LOG_DIRECTORY);
-
-  // create a rotating write stream
-  const accessLogStream = FileStreamRotator.getStream({
-    filename: `${ACCESS_LOG_DIRECTORY}/access-%DATE%.log`,
-    frequency: 'daily',
-    verbose: false,
-    date_format: 'YYYY-MM-DD',
-  });
-
-  // setup the logger
-  app.use(morgan('combined', { stream: accessLogStream }));
-  Logger.activate();
+  app.use(morgan('dev'));
+  Logger.activate('console');
   logger.info(process.env);
+
+  app.use((err, req, res, next) => {
+    res.status(err.status || 500);
+    return res.json({
+      message: err.message,
+      error: err,
+    });
+  });
 };

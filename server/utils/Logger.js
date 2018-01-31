@@ -1,3 +1,4 @@
+const fx = require('mkdir-recursive');
 const fs = require('fs');
 const path = require('path');
 const bunyan = require('bunyan');
@@ -8,7 +9,7 @@ module.exports = {
   activate: (env) => {
     switch ((env || process.env.NODE_ENV || '').toLowerCase()) {
       case 'production':
-        fs.existsSync(CONSOLE_LOG_DIRECTORY) || fs.mkdirSync(CONSOLE_LOG_DIRECTORY);
+        fs.existsSync(CONSOLE_LOG_DIRECTORY) || fx.mkdirSync(CONSOLE_LOG_DIRECTORY);
 
         const log = bunyan.createLogger({
           name: 'console.log',

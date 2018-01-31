@@ -1,0 +1,11 @@
+{
+  "name": "eroterest-helper",
+  "alias": "eroterest-helper",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "dotenv": true,
+  "engines": {
+    "node": "8.x.x"
+  }
+}
