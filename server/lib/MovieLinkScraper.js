@@ -22,7 +22,8 @@ module.exports = class MovieLinkScraper {
       .$('a')
       .filter(function (i, el) {
         try {
-          return MOVIE_SEARVE_URLS.includes(url.parse(result.$(this).attr('href')).hostname);
+          const { hostname } = url.parse(result.$(this).attr('href'));
+          return MOVIE_SEARVE_URLS.includes(hostname);
         } catch (e) {
           return false;
         }
