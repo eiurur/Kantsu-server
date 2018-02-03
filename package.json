@@ -1,10 +1,11 @@
 {
-  "name": "eroterest-helper-server",
+  "name": "kantsu-server",
   "version": "0.1.0",
   "description": "",
   "author": "eiurur",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.0.2",
     "bunyan": "^1.0.0",
     "cheerio-httpcli": "^0.7.2",
@@ -26,6 +27,7 @@
     "mkdir-recursive": "^0.4.0",
     "morgan": "^1.0.0",
     "node-cache": "^4.1.1",
+    "redis": "^2.8.0",
     "request": "^2.42.0",
     "session": "^0.1.0",
     "start": "^5.1.0",

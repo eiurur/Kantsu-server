@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = (listener) => {
   try {
-    const hskey = fs.readFileSync(path.resolve('keys', 'app-key.pem'));
-    const hscert = fs.readFileSync(path.resolve('keys', 'app-cert.pem'));
+    const hskey = fs.readFileSync(path.resolve('keys', 'key.pem'));
+    const hscert = fs.readFileSync(path.resolve('keys', 'cert.pem'));
 
     const httpsOptions = {
       key: hskey,

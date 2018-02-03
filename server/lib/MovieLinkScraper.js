@@ -19,7 +19,7 @@ module.exports = class MovieLinkScraper {
   async extract() {
     const result = await client.fetch(this.url);
     return result
-      .$('a')
+      .$('[href]')
       .filter(function (i, el) {
         try {
           const { hostname } = url.parse(result.$(this).attr('href'));
@@ -31,7 +31,6 @@ module.exports = class MovieLinkScraper {
       .map(function (i, el) {
         return {
           href: result.$(this).attr('href'),
-          title: result.$(this).attr('title'),
         };
       })
       .get();

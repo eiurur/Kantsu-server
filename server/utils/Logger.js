@@ -35,7 +35,7 @@ module.exports = {
         break;
       case 'development':
         // // // Logger (console)
-        // fs.existsSync(CONSOLE_LOG_DIRECTORY) || fs.mkdirSync(CONSOLE_LOG_DIRECTORY);
+        // fs.existsSync(CONSOLE_LOG_DIRECTORY) || fx.mkdirSync(CONSOLE_LOG_DIRECTORY);
 
         // var log = bunyan.createLogger({
         //   name: 'console.log',

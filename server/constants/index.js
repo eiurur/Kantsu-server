@@ -8,6 +8,7 @@ const MOVIE_SEARVE_URLS = [
   'share-videos.se',
   'www.spankwire.com',
   'www.youporn.com',
+  'www.redtube.com',
 ];
 
 module.exports = {

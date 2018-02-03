@@ -1,6 +1,6 @@
 {
-  "name": "eroterest-helper",
-  "alias": "eroterest-helper",
+  "name": "kantsu",
+  "alias": "kantsu",
   "env": {
     "NODE_ENV": "production"
   },
