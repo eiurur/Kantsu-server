@@ -1,6 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
@@ -12,6 +13,7 @@ const env = process.env.NODE_ENV || 'development';
 module.exports = () => {
   const app = express();
   app.disable('x-powered-by');
+  app.use(cors());
   app.set('port', process.env.PORT);
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'jade');
