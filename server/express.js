@@ -13,7 +13,7 @@ const env = process.env.NODE_ENV || 'development';
 module.exports = () => {
   const app = express();
   app.disable('x-powered-by');
-  app.use(cors());
+  app.use(cors({origin: '*'}));
   app.set('port', process.env.PORT);
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'jade');
