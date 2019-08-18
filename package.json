@@ -47,7 +47,8 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "dev": "nodemon server/app.js"
+    "dev": "nodemon server/app.js",
+    "build": ""
   },
   "engines": {
     "node": "10.x"
