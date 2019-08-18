@@ -1,11 +1,8 @@
 {
+  "version": 2,
   "name": "kantsu",
-  "alias": "kantsu",
+  "alias": "kantsu.now.sh",
   "env": {
     "NODE_ENV": "production"
-  },
-  "dotenv": true,
-  "engines": {
-    "node": "8.x.x"
   }
 }
