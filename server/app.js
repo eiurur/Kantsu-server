@@ -9,7 +9,7 @@ const numCPUs = require('os').cpus().length;
 const listener = createListener();
 
 /**
- * routes, session
+ * routes
  */
 require('./routes/api')(listener);
 require('./routes/routes')(listener);

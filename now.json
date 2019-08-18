@@ -4,5 +4,23 @@
   "alias": "kantsu.now.sh",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+
+  "routes": [
+    {
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/.*",
+      "dest": "/server/app.js"
+    }
+  ],
+  "builds": [
+    {
+      "src": "/server/app.js",
+      "use": "@now/node-server"
+    }
+  ]
 }
