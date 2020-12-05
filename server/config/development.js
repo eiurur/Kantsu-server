@@ -8,7 +8,7 @@ module.exports = function (app) {
 
   app.use(morgan('dev'));
   Logger.activate();
-  logger.info(process.env);
+  // logger.info(process.env);
 
   app.use((err, req, res, next) => {
     res.status(err.status || 500);
