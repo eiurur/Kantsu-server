@@ -2,15 +2,16 @@
 
 Relay-Server for <a href="https://github.com/eiurur/Kantsu" target="_blank">Kantsu</a>
 
-# Development
+# Usage
 
-    $ git clone https://github.com/eiurur/Kantsu-server.git
-    $ npm i
-    $ npm start
+    git clone https://github.com/eiurur/Kantsu-server.git
+    cd Kantsu-server
+    npm i
+    npm start
 
 # Required
 
-* Redis
+- Redis
 
 # Deploy
 
