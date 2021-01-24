@@ -7,7 +7,7 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
-    "bunyan": "^1.8.14",
+    "bunyan": "^1.8.15",
     "cheerio-httpcli": "^0.8.1",
     "compression": "^1.7.4",
     "connect-cache-manifest": "^0.2.2",
@@ -25,10 +25,10 @@
     "redis": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "^7.14.0",
+    "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.7"
   },
   "scripts": {
     "start": "node server/app.js",
