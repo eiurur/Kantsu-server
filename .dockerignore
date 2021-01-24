@@ -1,0 +1,32 @@
+# archives
+*.zip
+*.lzh
+*.tar.gz
+*.tgz
+*.bz2
+*.dmg
+
+# OSX
+.DS_Store 
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+.apdisk
+
+# Rails
+.rspec
+log
+tmp
+db/*.sqlite3
+db/*.sqlite3-journal
+vendor/assets
+
+# .git
+.git
+.gitignore
+
+mongo_db
+
+# Node
+node_modules

@@ -4,14 +4,31 @@ Relay-Server for <a href="https://github.com/eiurur/Kantsu" target="_blank">Kant
 
 # Usage
 
+## If you use docker
+
+### Launch
+
+    git clone https://github.com/eiurur/Kantsu-server.git
+    cd Kantsu-server
+    docker-compose build
+    docker-compose up
+
+then go to `https://127.0.0.1:5003`.
+
+## else
+
+### Required
+
+- Redis
+
+### Launch
+
     git clone https://github.com/eiurur/Kantsu-server.git
     cd Kantsu-server
     npm i
     npm start
 
-# Required
-
-- Redis
+then go to `https://127.0.0.1:5003`.
 
 # Deploy
 

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  myapp:
+    container_name: myapp
+    restart: always
+    build: .
+    ports:
+      - '5003:5003'
+    links:
+      - redis
+    depends_on:
+      - redis
+    environment:
+      - NODE_ENV=development
+  redis:
+    container_name: myapp-redis
+    image: 'redis:5.0.8'

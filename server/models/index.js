@@ -5,7 +5,7 @@ let redisClient = null;
 if (process.env.REDIS_URI) {
   redisClient = redis.createClient(process.env.REDIS_URI);
 } else {
-  redisClient = redis.createClient();
+  redisClient = redis.createClient(6379, 'redis');
 }
 if (process.env.REDIS_PASSWORD) {
   redisClient.auth(process.env.REDIS_PASSWORD, (err) => {
