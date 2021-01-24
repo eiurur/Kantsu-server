@@ -1,14 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const pem = require('pem');
+const util = require('util');
+const createCertificate = util.promisify(pem.createCertificate);
 
-module.exports = (listener) => {
+module.exports = async (listener) => {
   try {
-    const hskey = fs.readFileSync(path.resolve('keys', 'key.pem'));
-    const hscert = fs.readFileSync(path.resolve('keys', 'cert.pem'));
-
+    const keys = await createCertificate({ days: 365, selfSigned: true });
     const httpsOptions = {
-      key: hskey,
-      cert: hscert,
+      key: keys.serviceKey,
+      cert: keys.certificate,
     };
     const { createServer } = require('https');
     return createServer(httpsOptions, listener);
