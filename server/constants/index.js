@@ -5,6 +5,7 @@ const MOVIE_SEARVE_URLS = [
   'jp.txxx.com',
   'jp.xhamster.com',
   'share-videos.se',
+  'vjav.com',
   'www.redtube.com',
   'www.spankwire.com',
   'www.tokyomotion.net',
