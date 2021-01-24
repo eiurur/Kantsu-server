@@ -29,8 +29,3 @@ then go to `https://127.0.0.1:5003`.
     npm start
 
 then go to `https://127.0.0.1:5003`.
-
-# Deploy
-
-    $ npm i now -g
-    $ now -e REDIS_URL=<YOUR_REDIS_URL> -e REDIS_PORT=<YOUR_REDIS_PORT> -e REDIS_PASSWORD=<YOUR_REDIS_PASSWORD>
