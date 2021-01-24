@@ -4,11 +4,13 @@ const MOVIE_SEARVE_URLS = [
   'jp.spankbang.com',
   'jp.txxx.com',
   'jp.xhamster.com',
-  'www.tube8.com',
   'share-videos.se',
-  'www.spankwire.com',
-  'www.youporn.com',
   'www.redtube.com',
+  'www.spankwire.com',
+  'www.tokyomotion.net',
+  'www.tube8.com',
+  'www.youjizz.com',
+  'www.youporn.com',
 ];
 
 module.exports = {
