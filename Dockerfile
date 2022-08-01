@@ -1,16 +1,20 @@
 FROM node:18
 
+## Add the wait script to the image
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
+RUN chmod +x /wait
+
 # Set the workdir /var/www/myapp
 WORKDIR /var/www/myapp
 
 # Copy the package.json to workdir
 COPY package.json ./
 
-# Copy application source
-COPY . .
-
 # Run npm install - install the npm dependencies
 RUN npm install
+
+# Copy application source
+COPY . .
 
 # Copy .env.docker to workdir/.env - use the docker env
 COPY .env.docker ./.env.docker
@@ -21,5 +25,4 @@ EXPOSE 5003
 # Generate build
 RUN npm run build
 
-# Start the application
-CMD ["npm", "start"]
+CMD /wait && npm start

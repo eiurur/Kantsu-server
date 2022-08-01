@@ -1,7 +1,7 @@
 version: '3'
 services:
-  myapp:
-    container_name: myapp
+  kantsu:
+    container_name: kantsu
     restart: always
     build: .
     ports:
@@ -11,7 +11,9 @@ services:
     depends_on:
       - redis
     environment:
-      - NODE_ENV=development
+      TZ: Asia/Tokyo
+      WAIT_HOSTS: kantsu-redis:6379
   redis:
-    container_name: myapp-redis
+    container_name: kantsu-redis
     image: 'redis:5.0.8'
+    restart: always
