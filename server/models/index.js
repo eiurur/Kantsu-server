@@ -1,6 +1,7 @@
 const redis = require('redis');
 
 let redisClient = null;
+console.log(process.env);
 if (process.env.REDIS_URI) {
   redisClient = redis.createClient(process.env.REDIS_URI);
 } else {
