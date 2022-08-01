@@ -6,29 +6,29 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.7.2",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.0",
     "bunyan": "^1.8.15",
-    "cheerio-httpcli": "^0.8.1",
+    "cheerio-httpcli": "^0.8.3",
     "compression": "^1.7.4",
     "connect-cache-manifest": "^0.2.2",
     "continuation-local-storage": "^3.2.1",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.1",
     "error-handler": "^1.0.0",
-    "express": "~4.17.1",
+    "express": "~4.18.1",
     "express-error-handler": "^1.1.0",
     "method-override": "^3.0.0",
     "mkdir-recursive": "^0.4.0",
     "morgan": "^1.10.0",
-    "pem": "^1.14.4",
+    "pem": "^1.14.6",
     "pug": "^3.0.2",
-    "redis": "^3.0.2"
+    "redis": "^4.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19"
   },
   "scripts": {
     "start": "node server/app.js",
@@ -36,6 +36,6 @@
     "build": "node -v"
   },
   "engines": {
-    "node": "10.x"
+    "node": "18.x"
   }
 }
