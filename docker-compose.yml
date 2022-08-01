@@ -1,19 +1,19 @@
 version: '3'
 services:
-  kantsu:
-    container_name: kantsu
+  kantsu-app:
+    container_name: kantsu-app
     restart: always
     build: .
     ports:
-      - '5003:5003'
+      - '15003:5003'
     links:
-      - redis
+      - kantsu-redis
     depends_on:
-      - redis
+      - kantsu-redis
     environment:
       TZ: Asia/Tokyo
       WAIT_HOSTS: kantsu-redis:6379
-  redis:
+  kantsu-redis:
     container_name: kantsu-redis
     image: 'redis:5.0.8'
     restart: always

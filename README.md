@@ -11,9 +11,10 @@ Relay-Server for <a href="https://github.com/eiurur/Kantsu" target="_blank">Kant
 ```sh
 git clone https://github.com/eiurur/Kantsu-server.git
 cd Kantsu-server
-docker-compose build
-docker-compose up
+start.bat
 ```
+
+and go to `https://127.0.0.1:15003`
 
 ### else
 
@@ -29,9 +30,11 @@ npm i
 npm start
 ```
 
+and go to `https://127.0.0.1:5003`
+
+
 ## 2. Enable requests to the server
 
-Go to `https://127.0.0.1:5003`.
 
 Continue to click on the "More Info" button and click on the "Access 127.0.0.1" link.
 

@@ -30,3 +30,4 @@ mongo_db
 
 # Node
 node_modules
+.env
