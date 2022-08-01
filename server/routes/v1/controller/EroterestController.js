@@ -1,10 +1,13 @@
 const path = require('path');
 
-const { MovieLinkScraper, ExternalLinkScraper } = require(path.resolve('server', 'lib'));
+const { MovieLinkScraper, ExternalLinkScraper } = require(path.resolve(
+  'server',
+  'lib'
+));
 const redisClient = require(path.resolve('server', 'models'));
 
-const EROTEREST_MOVIE_PAGE_PATTERN = /https:\/\/movie.eroterest.net\/page\/(\d+)\//;
-
+const EROTEREST_MOVIE_PAGE_PATTERN =
+  /https:\/\/movie.eroterest.net\/page\/(\d+)\//;
 
 module.exports = class EroterestController {
   // 個別ページから外部リンクを抜き出して返す
@@ -44,6 +47,7 @@ module.exports = class EroterestController {
 
       res.json({ movie });
     } catch (e) {
+      console.log(e);
       res.status(400).send(e.message);
     }
   }
