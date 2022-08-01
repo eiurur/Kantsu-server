@@ -1,7 +1,4 @@
-const bluebird = require('bluebird');
 const redis = require('redis');
-
-bluebird.promisifyAll(redis);
 
 let redisClient = null;
 if (process.env.REDIS_URI) {

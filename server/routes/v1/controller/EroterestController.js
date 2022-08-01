@@ -31,7 +31,7 @@ module.exports = class EroterestController {
 
       // production環境ではキャッシングする
       if (process.env.NODE_ENV === 'production') {
-        const reply = await redisClient.getAsync(url);
+        const reply = await redisClient.get(url);
         const cachedMovie = JSON.parse(reply);
         if (cachedMovie !== null) {
           console.log('caching!');
