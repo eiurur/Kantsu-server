@@ -4,6 +4,9 @@ const createCertificate = util.promisify(pem.createCertificate);
 
 module.exports = async (listener) => {
   try {
+    if (process.env.USE_RENDER === 'true') {
+      throw new Error('USE_RENDER is true');
+    }
     const keys = await createCertificate({ days: 365, selfSigned: true });
     const httpsOptions = {
       key: keys.serviceKey,
