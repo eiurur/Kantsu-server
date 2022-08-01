@@ -1,5 +1,4 @@
-# Install node v12
-FROM node:14
+FROM node:18
 
 # Set the workdir /var/www/myapp
 WORKDIR /var/www/myapp
