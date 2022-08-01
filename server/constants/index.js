@@ -1,4 +1,4 @@
-const MOVIE_SEARVE_URLS = [
+const MOVIE_SERVER_URLS = [
   'do-ga.eroterest.net',
   'javynow.com',
   'jp.pornhub.com',
@@ -17,5 +17,5 @@ const MOVIE_SEARVE_URLS = [
 ];
 
 module.exports = {
-  MOVIE_SEARVE_URLS,
+  MOVIE_SERVER_URLS,
 };

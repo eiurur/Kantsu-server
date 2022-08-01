@@ -2,7 +2,7 @@ const path = require('path');
 const url = require('url');
 const client = require('cheerio-httpcli');
 
-const { MOVIE_SEARVE_URLS } = require(path.resolve('server', 'constants'));
+const { MOVIE_SERVER_URLS } = require(path.resolve('server', 'constants'));
 
 module.exports = class MovieLinkScraper {
   constructor(_url) {
@@ -23,7 +23,7 @@ module.exports = class MovieLinkScraper {
       .filter(function (i, el) {
         try {
           const { hostname } = url.parse(result.$(this).attr('href'));
-          return MOVIE_SEARVE_URLS.includes(hostname);
+          return MOVIE_SERVER_URLS.includes(hostname);
         } catch (e) {
           return false;
         }
@@ -45,7 +45,11 @@ module.exports = class MovieLinkScraper {
   }
 
   uniq() {
-    return this.links.filter((link, index) =>
-      this.links.findIndex(l => l.href === link.href && l.name === link.name) === index);
+    return this.links.filter(
+      (link, index) =>
+        this.links.findIndex(
+          (l) => l.href === link.href && l.name === link.name
+        ) === index
+    );
   }
 };
